@@ -7,7 +7,7 @@ workflows:
     max_build_duration: 30
     environment:
       android_signing:
-        - keystore: WAKEUP_WARRIOR_KEYSTORE
+        - keystore: $WAKEUP_WARRIOR_KEYSTORE
           keystore_path: keystore.jks
       vars:
         PACKAGE_NAME: "com.wakeupwarrior"
@@ -40,7 +40,7 @@ workflows:
         ignore_failure: true
         
       - name: Build Debug APK
-        script: | |
+        script: |
           ./gradlew assembleDebug
           
       - name: Build Release APK
@@ -97,7 +97,7 @@ workflows:
     max_build_duration: 40
     environment:
       android_signing:
-        - keystore: WAKEUP_WARRIOR_KEYSTORE
+        - keystore: $WAKEUP_WARRIOR_KEYSTORE
           keystore_path: keystore.jks
       vars:
         PACKAGE_NAME: "com.wakeupwarrior"

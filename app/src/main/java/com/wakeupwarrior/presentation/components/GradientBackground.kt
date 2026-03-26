@@ -5,6 +5,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.*
 import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
@@ -166,7 +167,7 @@ fun AlarmPulseBackground(
                 drawCircle(
                     color = pulseColor.copy(alpha = pulseAlpha),
                     radius = size.minDimension * pulseScale,
-                    center = center
+                    center = Offset(size.width / 2f, size.height / 2f)
                 )
             }
     ) {

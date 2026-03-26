@@ -260,16 +260,14 @@ private fun ChallengeOption(
             }
             
             if (isLocked) {
-                Lock.let { icon ->
-                    Icon(
-                        imageVector = icon,
-                        contentDescription = "Locked",
-                        tint = Warning
-                    )
-                }
+                Icon(
+                    imageVector = Icons.Filled.Lock,
+                    contentDescription = "Locked",
+                    tint = Warning
+                )
             } else if (isSelected) {
                 Icon(
-                    imageVector = Check,
+                    imageVector = Icons.Filled.Check,
                     contentDescription = "Selected",
                     tint = Primary
                 )

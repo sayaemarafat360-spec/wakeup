@@ -55,6 +55,9 @@ class AlarmActivity : ComponentActivity() {
                         alarmId = alarmId,
                         onDismiss = {
                             finish()
+                        },
+                        onNavigateToChallenge = { _, _ ->
+                            // Handle challenge navigation
                         }
                     )
                 }

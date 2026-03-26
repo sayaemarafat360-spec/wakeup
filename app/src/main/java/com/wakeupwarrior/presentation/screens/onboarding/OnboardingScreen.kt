@@ -2,6 +2,7 @@ package com.wakeupwarrior.presentation.screens.onboarding
 
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.pager.HorizontalPager
@@ -59,7 +60,7 @@ val onboardingPages = listOf(
     )
 )
 
-@OptIn(ExperimentalAnimationApi::class)
+@OptIn(ExperimentalAnimationApi::class, ExperimentalFoundationApi::class)
 @Composable
 fun OnboardingScreen(
     onComplete: () -> Unit,

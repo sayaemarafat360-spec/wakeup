@@ -89,7 +89,7 @@ fun AnimatedProgressBar(
                 // Background
                 drawRoundRect(
                     color = GlassBackground,
-                    cornerRadius = cornerRadiusFloat
+                    cornerRadius = CornerRadius(cornerRadiusFloat)
                 )
                 
                 // Progress
@@ -98,7 +98,7 @@ fun AnimatedProgressBar(
                         brush = Brush.horizontalGradient(gradientColors),
                         topLeft = Offset.Zero,
                         size = Size(size.width * animatedProgress, size.height),
-                        cornerRadius = cornerRadiusFloat
+                        cornerRadius = CornerRadius(cornerRadiusFloat)
                     )
                 }
             }

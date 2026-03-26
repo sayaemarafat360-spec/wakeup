@@ -35,31 +35,6 @@ WakeUp Warrior is a revolutionary alarm clock app that **doesn't stop until you 
 | Billing | Google Play Billing |
 | Background Work | WorkManager |
 
-## 📁 Project Structure
-
-```
-app/src/main/java/com/wakeupwarrior/
-├── core/                    # Core utilities
-│   ├── di/                  # Dependency Injection
-│   ├── util/                # Extensions, Constants
-│   ├── alarm/               # Alarm scheduling
-│   └── notification/        # Notifications
-├── data/                    # Data layer
-│   ├── local/               # Room database, DAOs
-│   ├── repository/          # Repository implementations
-│   └── model/               # Data models
-├── domain/                  # Domain layer
-│   ├── model/               # Domain models
-│   ├── repository/          # Repository interfaces
-│   └── usecase/             # Business logic
-├── presentation/            # UI layer
-│   ├── theme/               # Colors, Typography, Shapes
-│   ├── components/          # Reusable composables
-│   ├── navigation/          # Navigation graph
-│   └── screens/             # Screen composables + ViewModels
-└── service/                 # Background services
-```
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -103,52 +78,35 @@ app/src/main/java/com/wakeupwarrior/
 ./gradlew bundleRelease
 ```
 
-## ☁️ Building with Bitrise
+## ☁️ Building with Codemagic
 
-This project is configured for cloud builds on [Bitrise](https://bitrise.io):
+This project is configured for cloud builds on [Codemagic](https://codemagic.io):
 
 ### Quick Setup
 
 1. **Connect your repository**
-   - Log in to Bitrise
-   - Click "Add New App"
+   - Log in to Codemagic
+   - Click "Add application"
    - Select your Git provider and repository
 
-2. **Configure the app**
-   - Platform: Android
-   - Bitrise will auto-detect the `bitrise.yml` configuration
+2. **Select configuration**
+   - Codemagic will auto-detect `codemagic.yaml`
+   - Select the `android-debug` workflow
 
-3. **Set up secrets** (for release builds)
-   - Copy `bitrise.secrets.yml.example` to `bitrise.secrets.yml`
-   - Add your signing keystore and Google Play credentials in Bitrise dashboard:
-     - `BITRISEIO_ANDROID_KEYSTORE_URL` - Upload your keystore
-     - `BITRISEIO_ANDROID_KEYSTORE_PASSWORD` - Keystore password
-     - `BITRISEIO_ANDROID_KEYSTORE_ALIAS` - Key alias
-     - `BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD` - Key password
-     - `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL` - Google Play service account
-
-4. **Start building!**
+3. **Start building!**
 
 ### Workflows
 
 | Workflow | Trigger | Output |
 |----------|---------|--------|
-| `debug` | PRs, push to develop | Debug APK |
-| `primary` | Push to main | Debug APK + Tests |
-| `release` | Git tag (v*) | Signed Release APK/AAB |
+| `android-debug` | Push to any branch | Debug APK |
+| `android-release` | Tag creation (commented out) | Signed Release APK |
 
-### Local Bitrise Testing
+### For Release Builds
 
-```bash
-# Install Bitrise CLI
-brew install bitrise
-
-# Run debug workflow locally
-bitrise run debug
-
-# Validate bitrise.yml
-bitrise validate
-```
+1. Upload your keystore to Codemagic as `WAKEUP_WARRIOR_KEYSTORE`
+2. Uncomment the `android-release` workflow in `codemagic.yaml`
+3. Add Google Play credentials
 
 ## 🔑 Configuration
 
@@ -168,11 +126,7 @@ object AdMob {
 For release builds, you need:
 - A keystore file
 - Keystore password, key alias, and key password
-- Configure these in Bitrise secrets or `local.properties`
-
-## 📱 Screenshots
-
-*Screenshots will be added after initial release*
+- Configure these in Codemagic settings
 
 ## 🏗 Architecture
 
@@ -204,8 +158,6 @@ The app follows Clean Architecture with MVVM pattern:
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please read our contributing guidelines before submitting PRs.
-
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
@@ -214,11 +166,7 @@ Contributions are welcome! Please read our contributing guidelines before submit
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Contact
-
-For questions or support, please open an issue on GitHub.
+This project is licensed under the MIT License.
 
 ---
 

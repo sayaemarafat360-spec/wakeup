@@ -1,6 +1,5 @@
 package com.wakeupwarrior.presentation.screens.home
 
-import androidx.compose.ui.graphics.Color
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.layout.*
@@ -511,3 +510,6 @@ private fun EmptyAlarmsState(
         )
     }
 }
+
+// Need to import Color
+import androidx.compose.ui.graphics.Color

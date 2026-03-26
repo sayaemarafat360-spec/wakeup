@@ -109,7 +109,6 @@ dependencies {
 
     // WorkManager
     implementation("androidx.work:work-runtime-ktx:2.9.0")
-    implementation("androidx.hilt:hilt-work:1.1.0")
 
     // Accompanist for permissions
     implementation("com.google.accompanist:accompanist-permissions:0.32.0")

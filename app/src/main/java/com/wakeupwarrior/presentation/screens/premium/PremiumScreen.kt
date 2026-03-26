@@ -1,6 +1,5 @@
 package com.wakeupwarrior.presentation.screens.premium
 
-import androidx.compose.ui.graphics.Color
 import androidx.compose.animation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
@@ -285,3 +284,6 @@ private fun PlanCard(
         }
     }
 }
+
+// Need to import Color
+import androidx.compose.ui.graphics.Color

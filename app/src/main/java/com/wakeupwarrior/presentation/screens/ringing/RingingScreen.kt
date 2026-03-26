@@ -1,6 +1,5 @@
 package com.wakeupwarrior.presentation.screens.ringing
 
-import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.layout.*
@@ -227,3 +226,6 @@ fun RingingScreen(
         }
     }
 }
+
+// Import statements
+import androidx.compose.ui.graphics.graphicsLayer

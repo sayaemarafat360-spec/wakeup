@@ -27,6 +27,10 @@ workflows:
         script: |
           echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
           
+      - name: Make gradlew executable
+        script: |
+          chmod +x ./gradlew
+          
       - name: Run Lint
         script: |
           ./gradlew lintDebug
@@ -71,6 +75,10 @@ workflows:
   #     - name: Set up local.properties
   #       script: |
   #         echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
+  #         
+  #     - name: Make gradlew executable
+  #       script: |
+  #         chmod +x ./gradlew
   #         
   #     - name: Build Release AAB
   #       script: |

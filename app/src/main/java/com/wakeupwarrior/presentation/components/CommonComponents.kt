@@ -88,7 +88,7 @@ fun AnimatedProgressBar(
                 // Background
                 drawRoundRect(
                     color = GlassBackground,
-                    cornerRadius = cornerRadius.toPx()
+                    cornerRadius = androidx.compose.ui.graphics.drawscope.CornerRadius(cornerRadius.toPx())
                 )
                 
                 // Progress
@@ -97,7 +97,7 @@ fun AnimatedProgressBar(
                         brush = Brush.horizontalGradient(gradientColors),
                         topLeft = Offset.Zero,
                         size = Size(size.width * animatedProgress, size.height),
-                        cornerRadius = cornerRadius.toPx()
+                        cornerRadius = androidx.compose.ui.graphics.drawscope.CornerRadius(cornerRadius.toPx())
                     )
                 }
             }

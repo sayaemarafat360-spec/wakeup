@@ -20,7 +20,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.compose.ui.draw.offset
 import kotlinx.coroutines.launch
 import com.wakeupwarrior.presentation.components.GradientBackground
 import com.wakeupwarrior.presentation.components.GlassButton
@@ -68,7 +67,7 @@ fun OnboardingScreen(
     viewModel: OnboardingViewModel = hiltViewModel()
 ) {
     val pagerState = rememberPagerState(pageCount = { onboardingPages.size })
-    val currentPage by pagerState.currentPage.collectAsState()
+    val currentPage = pagerState.currentPage
     
     val scope = rememberCoroutineScope()
     

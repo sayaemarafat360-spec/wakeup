@@ -1,5 +1,7 @@
 package com.wakeupwarrior.data.model
 
+import java.util.Calendar
+
 data class Alarm(
     val id: Long = 0,
     val label: String,
@@ -73,6 +75,3 @@ private fun Int.toDayName(): String {
         else -> ""
     }
 }
-
-// Need to import Calendar
-import java.util.Calendar

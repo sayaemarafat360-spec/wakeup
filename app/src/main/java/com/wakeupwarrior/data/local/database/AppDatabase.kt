@@ -19,7 +19,7 @@ import com.wakeupwarrior.data.local.entity.UserStatsEntity
         ChallengeRecordEntity::class
     ],
     version = 1,
-    exportSchema = true
+    exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
     abstract fun alarmDao(): AlarmDao

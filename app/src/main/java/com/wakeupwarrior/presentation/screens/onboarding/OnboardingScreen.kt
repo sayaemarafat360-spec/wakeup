@@ -19,6 +19,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.compose.ui.draw.offset
+import kotlinx.coroutines.launch
 import com.wakeupwarrior.presentation.components.GradientBackground
 import com.wakeupwarrior.presentation.components.GlassButton
 import com.wakeupwarrior.presentation.components.GlassButtonSecondary
@@ -270,7 +272,4 @@ fun PageIndicator(
             )
     )
 }
-
-// Need to import kotlinx.coroutines.launch
-import kotlinx.coroutines.launch
 import androidx.compose.ui.draw.offset

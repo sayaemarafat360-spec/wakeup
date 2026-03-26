@@ -20,6 +20,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import com.wakeupwarrior.data.model.Difficulty
 import com.wakeupwarrior.presentation.components.*
 import com.wakeupwarrior.presentation.theme.*
@@ -307,8 +309,6 @@ private fun levenshteinDistance(s1: String, s2: String): Int {
         }
     }
     return costs[s2.length]
-}
-
-// Import for coroutine
+}// Import for coroutine
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

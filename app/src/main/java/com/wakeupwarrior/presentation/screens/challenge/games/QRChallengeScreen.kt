@@ -11,6 +11,7 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -249,7 +250,5 @@ fun QRChallengeScreen(
         
         Spacer(modifier = Modifier.height(48.dp))
     }
-}
-
-// Need to import border
+}// Need to import border
 import androidx.compose.foundation.border

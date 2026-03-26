@@ -309,6 +309,4 @@ private fun levenshteinDistance(s1: String, s2: String): Int {
         }
     }
     return costs[s2.length]
-}// Import for coroutine
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+}

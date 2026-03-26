@@ -240,7 +240,7 @@ fun GlassButtonGlow(
                             30f,
                             0f,
                             0f,
-                            glowColor
+                            glowColor.toArgb()
                         )
                     }
                     canvas.drawRoundRect(

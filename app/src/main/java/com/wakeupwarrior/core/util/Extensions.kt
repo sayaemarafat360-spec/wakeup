@@ -69,7 +69,7 @@ fun Long.toTimeUntilString(): String {
             val days = hours / 24
             "$days day${if (days > 1) "s" else ""}"
         }
-        hours > 0 -> "$hours hr $min min"
+        hours > 0 -> "$hours hr $minutes min"
         else -> "$minutes min"
     }
 }

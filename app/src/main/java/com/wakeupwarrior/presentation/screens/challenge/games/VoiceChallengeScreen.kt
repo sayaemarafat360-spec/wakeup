@@ -20,8 +20,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.delay
 import com.wakeupwarrior.data.model.Difficulty
 import com.wakeupwarrior.presentation.components.*
 import com.wakeupwarrior.presentation.theme.*
@@ -61,6 +60,8 @@ fun VoiceChallengeScreen(
     ) { isGranted ->
         hasAudioPermission = isGranted
     }
+    
+    val scope = rememberCoroutineScope()
     
     LaunchedEffect(Unit) {
         if (!hasAudioPermission) {
@@ -162,8 +163,8 @@ fun VoiceChallengeScreen(
                         if (!isListening) {
                             isListening = true
                             // Simulate speech recognition (in real app, use SpeechRecognizer)
-                            kotlinx.coroutines.GlobalScope.launch {
-                                kotlinx.coroutines.delay(3000)
+                            scope.launch {
+                                delay(3000)
                                 spokenText = targetPhrase // Placeholder - would be actual speech result
                                 isListening = false
                             }

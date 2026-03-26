@@ -1,6 +1,9 @@
 package com.wakeupwarrior.presentation.screens.alarm
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -257,16 +260,16 @@ private fun ChallengeOption(
             }
             
             if (isLocked) {
-                androidx.compose.material.icons.Icons.Default.Lock.let { icon ->
-                    androidx.compose.material3.Icon(
+                Lock.let { icon ->
+                    Icon(
                         imageVector = icon,
                         contentDescription = "Locked",
                         tint = Warning
                     )
                 }
             } else if (isSelected) {
-                androidx.compose.material3.Icon(
-                    imageVector = androidx.compose.material.icons.Icons.Default.Check,
+                Icon(
+                    imageVector = Check,
                     contentDescription = "Selected",
                     tint = Primary
                 )

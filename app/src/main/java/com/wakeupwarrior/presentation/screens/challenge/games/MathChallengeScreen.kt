@@ -20,6 +20,7 @@ import com.wakeupwarrior.data.model.Difficulty
 import com.wakeupwarrior.presentation.components.*
 import com.wakeupwarrior.presentation.theme.*
 import kotlin.random.Random
+import kotlinx.coroutines.delay
 
 data class MathProblem(
     val expression: String,
@@ -43,6 +44,8 @@ fun MathChallengeScreen(
     var userInput by remember { mutableStateOf("") }
     var isCorrect by remember { mutableStateOf<Boolean?>(null) }
     var attempts by remember { mutableStateOf(0) }
+    
+    val scope = rememberCoroutineScope()
     
     // Animation states
     val scale by animateFloatAsState(
@@ -188,8 +191,8 @@ fun MathChallengeScreen(
                         currentProblem = generateProblem(difficulty)
                         attempts = 0
                     }
-                    kotlinx.coroutines.GlobalScope.launch {
-                        kotlinx.coroutines.delay(1000)
+                    scope.launch {
+                        delay(1000)
                         isCorrect = null
                     }
                 }

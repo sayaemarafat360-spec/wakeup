@@ -105,12 +105,26 @@ fun GlassCardGlow(
     backgroundColor: Color = GlassBackground,
     borderColor: Color = GlassBorder,
     cornerRadius: Dp = 24.dp,
+    onClick: (() -> Unit)? = null,
     content: @Composable BoxScope.() -> Unit
 ) {
+    val interactionSource = remember { MutableInteractionSource() }
+    val isPressed by interactionSource.collectIsPressedAsState()
+    
+    val scale by animateFloatAsState(
+        targetValue = if (isPressed && onClick != null) 0.98f else 1f,
+        animationSpec = tween(100),
+        label = "scale"
+    )
+    
     val shape = RoundedCornerShape(cornerRadius)
     
     Box(
         modifier = modifier
+            .graphicsLayer {
+                scaleX = scale
+                scaleY = scale
+            }
             .drawBehind {
                 drawIntoCanvas { canvas ->
                     val paint = Paint().apply {
@@ -118,7 +132,7 @@ fun GlassCardGlow(
                             20f,
                             0f,
                             0f,
-                            glowColor
+                            glowColor.toArgb()
                         )
                     }
                     canvas.drawRoundRect(
@@ -152,6 +166,17 @@ fun GlassCardGlow(
                     )
                 ),
                 shape = shape
+            )
+            .then(
+                if (onClick != null) {
+                    Modifier.clickable(
+                        interactionSource = interactionSource,
+                        indication = null,
+                        onClick = onClick
+                    )
+                } else {
+                    Modifier
+                }
             )
             .padding(1.dp)
     ) {

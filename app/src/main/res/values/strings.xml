@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WakeUp Warrior</string>
+    
+    <!-- Onboarding -->
+    <string name="onboarding_welcome_title">Welcome to\nWakeUp Warrior</string>
+    <string name="onboarding_welcome_desc">The alarm app that won\'t let you snooze your life away.</string>
+    <string name="onboarding_alarm_title">Alarms That\nActually Work</string>
+    <string name="onboarding_alarm_desc">No more sleeping through important moments. Our alarms demand your full attention.</string>
+    <string name="onboarding_challenge_title">Complete Challenges\nto Wake Up</string>
+    <string name="onboarding_challenge_desc">Solve puzzles, shake your phone, scan QR codes - challenges that force your brain to wake up.</string>
+    <string name="onboarding_ready_title">Ready to\nConquer Mornings?</string>
+    <string name="onboarding_ready_desc">Join thousands of warriors who\'ve defeated their snooze habits forever.</string>
+    <string name="onboarding_skip">Skip</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_get_started">Get Started</string>
+    
+    <!-- Home Screen -->
+    <string name="home_greeting">Good %s, Warrior!</string>
+    <string name="home_next_alarm">Next Alarm</string>
+    <string name="home_no_alarms">No alarms set</string>
+    <string name="home_add_alarm">Add your first alarm</string>
+    <string name="home_streak">Day Streak</string>
+    <string name="home_coins">Coins</string>
+    
+    <!-- Alarm Screen -->
+    <string name="alarm_create_title">Create Alarm</string>
+    <string name="alarm_edit_title">Edit Alarm</string>
+    <string name="alarm_label">Alarm Name</string>
+    <string name="alarm_label_hint">Wake up for work</string>
+    <string name="alarm_time">Time</string>
+    <string name="alarm_repeat">Repeat</string>
+    <string name="alarm_challenge">Challenge Type</string>
+    <string name="alarm_difficulty">Difficulty</string>
+    <string name="alarm_sound">Sound</string>
+    <string name="alarm_vibration">Vibration</string>
+    <string name="alarm_escalation">Smart Escalation</string>
+    <string name="alarm_snooze_limit">Snooze Limit</string>
+    <string name="alarm_save">Save Alarm</string>
+    <string name="alarm_delete">Delete Alarm</string>
+    <string name="alarm_enabled">Alarm Enabled</string>
+    
+    <!-- Days -->
+    <string name="day_monday">Mon</string>
+    <string name="day_tuesday">Tue</string>
+    <string name="day_wednesday">Wed</string>
+    <string name="day_thursday">Thu</string>
+    <string name="day_friday">Fri</string>
+    <string name="day_saturday">Sat</string>
+    <string name="day_sunday">Sun</string>
+    
+    <!-- Challenges -->
+    <string name="challenge_math">Math Puzzle</string>
+    <string name="challenge_memory">Memory Game</string>
+    <string name="challenge_qr">QR Code Scan</string>
+    <string name="challenge_shake">Shake It Off</string>
+    <string name="challenge_typing">Typing Challenge</string>
+    <string name="challenge_voice">Voice Command</string>
+    <string name="challenge_steps">Step Counter</string>
+    
+    <!-- Difficulty -->
+    <string name="difficulty_easy">Easy</string>
+    <string name="difficulty_medium">Medium</string>
+    <string name="difficulty_hard">Hard</string>
+    <string name="difficulty_nightmare">Nightmare</string>
+    
+    <!-- Ringing Screen -->
+    <string name="ringing_title">WAKE UP!</string>
+    <string name="ringing_subtitle">Complete the challenge to stop</string>
+    <string name="ringing_snooze">Snooze (%d left)</string>
+    <string name="ringing_start_challenge">Start Challenge</string>
+    
+    <!-- Challenge Screens -->
+    <string name="challenge_solve">Solve to dismiss</string>
+    <string name="challenge_submit">Submit</string>
+    <string name="challenge_correct">Correct!</string>
+    <string name="challenge_incorrect">Try again!</string>
+    <string name="challenge_shake_count">Shake %d times</string>
+    <string name="challenge_shake_remaining">%d more shakes</string>
+    <string name="challenge_scan_qr">Scan QR Code</string>
+    <string name="challenge_scan_hint">Find the QR code you registered</string>
+    <string name="challenge_say_phrase">Say: "%s"</string>
+    <string name="challenge_type_phrase">Type the phrase</string>
+    <string name="challenge_memorize">Memorize the pattern</string>
+    <string name="challenge_remember">Remember?</string>
+    <string name="challenge_steps_remaining">%d steps remaining</string>
+    
+    <!-- Stats Screen -->
+    <string name="stats_title">Your Stats</string>
+    <string name="stats_current_streak">Current Streak</string>
+    <string name="stats_longest_streak">Longest Streak</string>
+    <string name="stats_total_wakeups">Total Wake-ups</string>
+    <string name="stats_challenges_completed">Challenges Completed</string>
+    <string name="stats_avg_wake_time">Average Wake Time</string>
+    <string name="stats_this_week">This Week</string>
+    
+    <!-- Achievements -->
+    <string name="achievements_title">Achievements</string>
+    <string name="achievements_locked">Locked</string>
+    <string name="achievements_unlocked">Unlocked</string>
+    
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_general">General</string>
+    <string name="settings_sound">Default Sound</string>
+    <string name="settings_vibration">Vibration</string>
+    <string name="settings_escalation">Smart Escalation</string>
+    <string name="settings_snooze">Default Snooze Limit</string>
+    <string name="settings_notifications">Notifications</string>
+    <string name="settings_about">About</string>
+    <string name="settings_rate">Rate Us</string>
+    <string name="settings_privacy">Privacy Policy</string>
+    <string name="settings_version">Version %s</string>
+    
+    <!-- Premium -->
+    <string name="premium_title">Go Premium</string>
+    <string name="premium_subtitle">Unlock your full potential</string>
+    <string name="premium_monthly">Monthly</string>
+    <string name="premium_yearly">Yearly</string>
+    <string name="premium_lifetime">Lifetime</string>
+    <string name="premium_price_monthly">$2.99/month</string>
+    <string name="premium_price_yearly">$19.99/year</string>
+    <string name="premium_price_lifetime">$49.99 once</string>
+    <string name="premium_feature_1">Unlimited alarms</string>
+    <string name="premium_feature_2">All challenge types</string>
+    <string name="premium_feature_3">Custom sounds</string>
+    <string name="premium_feature_4">Advanced analytics</string>
+    <string name="premium_feature_5">Premium themes</string>
+    <string name="premium_feature_6">No ads</string>
+    <string name="premium_restore">Restore Purchase</string>
+    <string name="premium_subscribe">Subscribe Now</string>
+    
+    <!-- Common -->
+    <string name="loading">Loading…</string>
+    <string name="error">Something went wrong</string>
+    <string name="retry">Retry</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    
+    <!-- Notifications -->
+    <string name="notification_channel_name">Alarm Notifications</string>
+    <string name="notification_channel_desc">Notifications for alarm triggers</string>
+    <string name="notification_alarm_title">Alarm: %s</string>
+    <string name="notification_alarm_text">Tap to complete your challenge</string>
+    
+    <!-- Time of day -->
+    <string name="time_morning">morning</string>
+    <string name="time_afternoon">afternoon</string>
+    <string name="time_evening">evening</string>
+    <string name="time_night">night</string>
+    
+    <!-- Permissions -->
+    <string name="permission_camera_title">Camera Access Required</string>
+    <string name="permission_camera_desc">Camera is needed for QR code scanning challenges.</string>
+    <string name="permission_microphone_title">Microphone Access Required</string>
+    <string name="permission_microphone_desc">Microphone is needed for voice challenges.</string>
+    <string name="permission_activity_title">Activity Recognition Required</string>
+    <string name="permission_activity_desc">Activity recognition is needed for step counting challenges.</string>
+    <string name="permission_notification_title">Notifications Required</string>
+    <string name="permission_notification_desc">Notifications are required for alarm alerts.</string>
+    <string name="permission_grant">Grant Permission</string>
+    <string name="permission_skip">Skip for Now</string>
+</resources>

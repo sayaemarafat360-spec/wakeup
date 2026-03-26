@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primary">#6C5CE7</color>
+    <color name="secondary">#00CEC9</color>
+    <color name="tertiary">#FD79A8</color>
+    
+    <!-- Status Colors -->
+    <color name="success">#00B894</color>
+    <color name="warning">#FDCB6E</color>
+    <color name="error">#E17055</color>
+    
+    <!-- Background Colors -->
+    <color name="background">#0D0D1A</color>
+    <color name="surface">#1A1A2E</color>
+    <color name="surface_high">#252542</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B4B4C4</color>
+    <color name="text_muted">#6C6C8A</color>
+    
+    <!-- Glass Effect -->
+    <color name="glass_background">#14FFFFFF</color>
+    <color name="glass_border">#26FFFFFF</color>
+    
+    <!-- Gradients -->
+    <color name="gradient_start">#6C5CE7</color>
+    <color name="gradient_end">#00CEC9</color>
+    
+    <!-- Alarm Specific -->
+    <color name="alarm_active">#00B894</color>
+    <color name="alarm_inactive">#6C6C8A</color>
+    <color name="alarm_urgent">#E17055</color>
+</resources>

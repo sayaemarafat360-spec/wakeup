@@ -1,0 +1,134 @@
+# WakeUp Warrior - Codemagic CI/CD Configuration
+# Build your Android app in the cloud
+
+workflows:
+  android-app:
+    name: WakeUp Warrior
+    max_build_duration: 30
+    environment:
+      android_signing:
+        - keystore_reference: WAKEUP_WARRIOR_KEYSTORE
+          keystore_path: keystore.jks
+      vars:
+        PACKAGE_NAME: "com.wakeupwarrior"
+        GOOGLE_PLAY_TRACK: internal
+      groups:
+        - google_play_credentials
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: main
+          include: true
+          source: true
+        - pattern: develop
+          include: true
+          source: true
+    scripts:
+      - name: Set up local.properties
+        script: |
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
+          
+      - name: Run Lint
+        script: |
+          ./gradlew lintDebug
+        ignore_failure: true
+        
+      - name: Run Unit Tests
+        script: |
+          ./gradlew testDebugUnitTest
+        ignore_failure: true
+        
+      - name: Build Debug APK
+        script: |
+          ./gradlew assembleDebug
+          
+      - name: Build Release APK
+        script: |
+          ./gradlew assembleRelease
+          
+    artifacts:
+      - app/build/outputs/**/*.apk
+      - app/build/outputs/**/*.aab
+      - app/build/reports/lint-results-debug.html
+      
+    publishing:
+      email:
+        recipients:
+          - your-email@example.com
+        notify:
+          success: true
+          failure: true
+          
+      # Google Play Publishing (uncomment when ready)
+      # google_play:
+      #   credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
+      #   track: $GOOGLE_PLAY_TRACK
+      #   submit_as_draft: true
+
+  # Development/Staging build
+  android-debug:
+    name: Debug Build
+    max_build_duration: 20
+    environment:
+      vars:
+        PACKAGE_NAME: "com.wakeupwarrior"
+    triggering:
+      events:
+        - pull_request
+      branch_patterns:
+        - pattern: '*'
+          include: true
+          source: true
+    scripts:
+      - name: Build Debug APK
+        script: |
+          ./gradlew assembleDebug
+    artifacts:
+      - app/build/outputs/**/*.apk
+    publishing:
+      email:
+        recipients:
+          - your-email@example.com
+
+  # Release build with signing
+  android-release:
+    name: Release Build
+    max_build_duration: 40
+    environment:
+      android_signing:
+        - keystore_reference: WAKEUP_WARRIOR_KEYSTORE
+          keystore_path: keystore.jks
+      vars:
+        PACKAGE_NAME: "com.wakeupwarrior"
+      groups:
+        - google_play_credentials
+    triggering:
+      events:
+        - tag
+    scripts:
+      - name: Set up local.properties
+        script: |
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
+          
+      - name: Build Release AAB
+        script: |
+          ./gradlew bundleRelease
+          
+      - name: Build Release APK
+        script: |
+          ./gradlew assembleRelease
+          
+    artifacts:
+      - app/build/outputs/**/*.apk
+      - app/build/outputs/**/*.aab
+      
+    publishing:
+      email:
+        recipients:
+          - your-email@example.com
+          
+      google_play:
+        credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
+        track: internal
+        submit_as_draft: true

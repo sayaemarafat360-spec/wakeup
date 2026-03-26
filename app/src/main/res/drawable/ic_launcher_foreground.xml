@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Background circle -->
+    <path
+        android:fillColor="#6C5CE7"
+        android:pathData="M54,54m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"/>
+    
+    <!-- Clock body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,30c-13.2,0 -24,10.8 -24,24s10.8,24 24,24s24,-10.8 24,-24S67.2,30 54,30zM54,72c-9.9,0 -18,-8.1 -18,-18s8.1,-18 18,-18s18,8.1 18,18S63.9,72 54,72z"/>
+    
+    <!-- Clock hands -->
+    <path
+        android:fillColor="#6C5CE7"
+        android:pathData="M54,38h2v16h-2z"/>
+    <path
+        android:fillColor="#6C5CE7"
+        android:pathData="M54,52h10v2h-10z"/>
+    
+    <!-- Clock center dot -->
+    <path
+        android:fillColor="#6C5CE7"
+        android:pathData="M54,52m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+    
+    <!-- Alarm bells -->
+    <path
+        android:fillColor="#00CEC9"
+        android:pathData="M35,28c-4,0 -7,3 -7,7c0,2 1,4 2.5,5.5l9,-9C38,29 36.5,28 35,28z"/>
+    <path
+        android:fillColor="#00CEC9"
+        android:pathData="M73,28c4,0 7,3 7,7c0,2 -1,4 -2.5,5.5l-9,-9C70,29 71.5,28 73,28z"/>
+    
+    <!-- Star/sparkle -->
+    <path
+        android:fillColor="#FD79A8"
+        android:pathData="M78,24l2,4l4,2l-4,2l-2,4l-2,-4l-4,-2l4,-2z"/>
+</vector>

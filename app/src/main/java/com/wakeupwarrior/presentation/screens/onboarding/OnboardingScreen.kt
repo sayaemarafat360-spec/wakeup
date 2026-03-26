@@ -1,5 +1,7 @@
 package com.wakeupwarrior.presentation.screens.onboarding
 
+import kotlinx.coroutines.launch
+import androidx.compose.ui.draw.offset
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
@@ -270,7 +272,3 @@ fun PageIndicator(
             )
     )
 }
-
-// Need to import kotlinx.coroutines.launch
-import kotlinx.coroutines.launch
-import androidx.compose.ui.draw.offset

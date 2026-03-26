@@ -250,6 +250,3 @@ fun QRChallengeScreen(
         Spacer(modifier = Modifier.height(48.dp))
     }
 }
-
-// Need to import border
-import androidx.compose.foundation.border
